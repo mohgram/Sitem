@@ -16,6 +16,14 @@ def seatreserve():
   if seatnumber not in seatstaken:
    seatstaken.append(seatnumber)
    print("That seat has now been reserved!")
+   print("Would you like to deal with another flight? Y/N")
+   ch = str(input())
+   if ch == 'Y' or ch == 'y':
+     alreadyhaveit()
+   else:
+     quit()
+
+
   else:
    print("Sorry, but that seat's been taken.")
    seatreserve()
